@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,7 +10,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <Card className="flex flex-col overflow-hidden h-full bg-card hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+    <Card className="group flex flex-col overflow-hidden h-full bg-card hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
       <CardHeader className="p-0">
         <Link href={`/products/${product.id}`} className="block aspect-video relative overflow-hidden">
           <Image
@@ -17,9 +18,10 @@ export default function ProductCard({ product }: ProductCardProps) {
             alt={product.name}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
             data-ai-hint={product.dataAiHint || "electronic component"}
           />
+          <div className="absolute inset-0 bg-accent/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
         </Link>
       </CardHeader>
       <CardContent className="p-6 flex-grow">
