@@ -5,9 +5,40 @@ import { ArrowRight, CircuitBoard, Lightbulb, SearchCheck, Users } from "lucide-
 import Image from "next/image";
 import Link from "next/link";
 
+const ExpertAdviceCard = () => (
+  <Card className="bg-card hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300">
+    <div className="flex flex-col md:flex-row items-center p-6 gap-6">
+      <div className="flex-shrink-0">
+        <div className="p-4 bg-accent/10 rounded-full inline-block">
+          <Users className="h-12 w-12 text-accent" />
+        </div>
+      </div>
+      <div className="flex-grow text-center md:text-left">
+        <CardTitle className="font-headline text-2xl">Need Expert Advice?</CardTitle>
+        <CardDescription className="mt-2 text-lg">
+          Our specialists are ready to help you select the best components for your unique project requirements. Get personalized recommendations and technical support.
+        </CardDescription>
+      </div>
+      <div className="flex-shrink-0 mt-4 md:mt-0">
+        <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Link href="/contact">
+            Consult Our Experts <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </Button>
+      </div>
+    </div>
+  </Card>
+);
+
 export default function HomePage() {
   return (
     <div className="space-y-16">
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <ExpertAdviceCard />
+        </div>
+      </section>
+
       <section className="relative text-center py-16 md:py-24 rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/10 via-background to-background">
         <div className="absolute inset-0 opacity-5">
             <Image 
@@ -41,10 +72,16 @@ export default function HomePage() {
       </section>
 
       <section className="py-12">
+        <div className="container mx-auto px-4">
+          <ExpertAdviceCard />
+        </div>
+      </section>
+
+      <section className="py-12">
         <h2 className="font-headline text-3xl font-bold text-center mb-12 text-primary">
           Explore Our Features
         </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 container mx-auto px-4">
           <FeatureCard
             icon={<Lightbulb className="h-10 w-10 text-accent" />}
             title="Component Selection Tool"
@@ -59,28 +96,6 @@ export default function HomePage() {
             link="/ai-search"
             linkText="Try AI Search"
           />
-          <Card className="md:col-span-2 bg-card hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300">
-            <div className="flex flex-col md:flex-row items-center p-6 gap-6">
-              <div className="flex-shrink-0">
-                <div className="p-4 bg-accent/10 rounded-full inline-block">
-                  <Users className="h-12 w-12 text-accent" />
-                </div>
-              </div>
-              <div className="flex-grow text-center md:text-left">
-                <CardTitle className="font-headline text-2xl">Need Expert Advice?</CardTitle>
-                <CardDescription className="mt-2 text-lg">
-                  Our specialists are ready to help you select the best components for your unique project requirements. Get personalized recommendations and technical support.
-                </CardDescription>
-              </div>
-              <div className="flex-shrink-0 mt-4 md:mt-0">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                  <Link href="/contact">
-                    Consult Our Experts <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </Card>
         </div>
       </section>
 
