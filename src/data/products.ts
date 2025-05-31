@@ -24,7 +24,7 @@ export const mockProducts: Product[] = [
     id: "ultrabook-x1",
     name: "UltraBook X1 - Thin & Light",
     category: "Laptops",
-    price: 1299.00,
+    price: 95000.00,
     shortDescription: "Powerful and sleek ultrabook for professionals on the go.",
     description: "The UltraBook X1 combines cutting-edge performance with an incredibly thin and light design. Featuring the latest Intel Core i7 processor, 16GB of RAM, a 1TB NVMe SSD, and a stunning 14-inch QHD+ display, it's built for productivity and portability. Long battery life and premium build quality make it the perfect companion for any task.",
     images: [
@@ -49,7 +49,7 @@ export const mockProducts: Product[] = [
     id: "gaming-rig-z9000",
     name: "Gaming Rig Z9000 Desktop",
     category: "Desktop PCs",
-    price: 2499.00,
+    price: 190000.00,
     shortDescription: "Ultimate gaming desktop with top-tier components.",
     description: "Experience unparalleled gaming performance with the Gaming Rig Z9000. Equipped with a high-end AMD Ryzen 9 processor, NVIDIA GeForce RTX 4080 graphics card, 32GB of DDR5 RAM, and a 2TB Gen4 NVMe SSD. Custom liquid cooling and a stunning tempered glass case with RGB lighting complete this powerhouse.",
     images: [
@@ -75,7 +75,7 @@ export const mockProducts: Product[] = [
     id: "ergo-keyboard-mk7",
     name: "ErgoPro Mechanical Keyboard MK7",
     category: "PC Accessories",
-    price: 179.99,
+    price: 12500.00,
     shortDescription: "Premium ergonomic mechanical keyboard for comfort and speed.",
     description: "The ErgoPro MK7 is designed for ultimate typing comfort and performance. It features a split ergonomic layout, tactile mechanical switches (Cherry MX Brown equivalent), PBT keycaps, customizable RGB backlighting, and programmable macros. Connect via USB-C or Bluetooth.",
     images: [
@@ -98,7 +98,7 @@ export const mockProducts: Product[] = [
     id: "laptop-screen-repair",
     name: "Laptop Screen Replacement Service",
     category: "Repair Services",
-    price: 149.00, // Starting price
+    price: 4500.00, // Starting price
     shortDescription: "Professional screen replacement for most laptop models.",
     description: "Cracked or malfunctioning laptop screen? Our expert technicians provide fast and reliable screen replacement services for a wide range of laptop brands and models. Price varies based on screen type and laptop model. Includes a 90-day warranty on parts and labor. Contact us for a quote.",
     images: [
@@ -109,7 +109,7 @@ export const mockProducts: Product[] = [
       { name: "Applicable Devices", value: "Most Laptop Models (consult for compatibility)" },
       { name: "Turnaround Time", value: "Typically 1-3 business days" },
       { name: "Warranty", value: "90-day on parts and labor" },
-      { name: "Pricing", value: "Starting from $149 (varies by model)" },
+      { name: "Pricing", value: "Starting from ₹4500 (varies by model)" },
     ],
     stock: 999, // Represents service availability
     sku: "SKU-REPAIR-SCRN",
@@ -120,7 +120,7 @@ export const mockProducts: Product[] = [
     id: "4k-monitor-proart",
     name: "ProArt 27-inch 4K UHD Monitor",
     category: "PC Accessories",
-    price: 499.00,
+    price: 42000.00,
     shortDescription: "Color-accurate 4K monitor for creative professionals.",
     description: "The ProArt 27-inch monitor delivers stunning 4K UHD resolution with exceptional color accuracy (100% sRGB, 99% Adobe RGB). Factory pre-calibrated for ΔE < 2. Ideal for photo editing, video production, and graphic design. Features USB-C connectivity with power delivery.",
     images: [
@@ -143,7 +143,7 @@ export const mockProducts: Product[] = [
     id: "pc-tuneup-service",
     name: "PC Performance Tune-Up Service",
     category: "Repair Services",
-    price: 79.00,
+    price: 1500.00,
     shortDescription: "Optimize your PC's speed and stability.",
     description: "Is your PC running slow? Our tune-up service includes system diagnostics, junk file removal, startup optimization, driver updates, and security checks to get your computer running smoothly again. Suitable for both desktops and laptops.",
     images: [
