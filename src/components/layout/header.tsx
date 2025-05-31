@@ -1,8 +1,9 @@
+
 "use client";
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Home, List, SlidersHorizontal, BrainCircuit, Mail } from 'lucide-react';
+import { Menu, X, Home, List, SlidersHorizontal, BrainCircuit } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
@@ -14,7 +15,7 @@ const navItems = [
   { href: '/browse', label: 'Browse Products', icon: List },
   { href: '/selector', label: 'Component Selector', icon: SlidersHorizontal },
   { href: '/ai-search', label: 'AI Parametric Search', icon: BrainCircuit },
-  { href: '/contact', label: 'Contact Us', icon: Mail },
+  // { href: '/contact', label: 'Contact Us', icon: Mail }, // Removed Contact Us
 ];
 
 export default function Header() {
