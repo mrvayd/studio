@@ -43,14 +43,7 @@ export default function HomePage() {
         <h2 className="font-headline text-3xl font-bold text-center mb-12 text-primary">
           Explore Our Features
         </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <FeatureCard
-            icon={<CircuitBoard className="h-10 w-10 text-accent" />}
-            title="Extensive Product Catalog"
-            description="Discover a wide range of electronic components, from basic resistors to advanced microcontrollers."
-            link="/browse"
-            linkText="Start Browsing"
-          />
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <FeatureCard
             icon={<Lightbulb className="h-10 w-10 text-accent" />}
             title="Component Selection Tool"
