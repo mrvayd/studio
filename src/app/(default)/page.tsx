@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, CircuitBoard, Lightbulb, SearchCheck, Users } from "lucide-react";
+import { ArrowRight, Lightbulb, SearchCheck, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,7 +33,7 @@ const EngineerAdviceCard = () => (
 export default function HomePage() {
   return (
     <div className="space-y-16">
-      <section className="relative text-center py-16 md:py-24 rounded-xl overflow-hidden">
+      <section className="relative text-center py-24 md:py-32">
         <div className="absolute inset-0 opacity-15">
             <Image
                 src="https://placehold.co/1200x600.png"
@@ -44,13 +44,13 @@ export default function HomePage() {
             />
         </div>
         <div className="relative z-10 container mx-auto px-4">
-          <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+          <h1 className="font-headline text-6xl font-bold tracking-tight sm:text-7xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
             Allied Electronics
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-foreground/80 sm:text-xl">
+          <p className="mt-8 max-w-3xl mx-auto text-xl text-foreground/70 sm:text-2xl md:text-3xl">
             complete solution of your problem
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 ease-in-out transform hover:scale-105">
               <Link href="/browse">
                 Browse Products <ArrowRight className="ml-2 h-5 w-5" />
