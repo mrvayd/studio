@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ExpertAdviceCard = () => (
-  <Card className="bg-card hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300">
+  <Card className="bg-card transition-shadow duration-300 hover:shadow-[0_0_20px_3px_hsl(var(--accent)/0.35)]">
     <div className="flex flex-col md:flex-row items-center p-6 gap-6">
       <div className="flex-shrink-0">
         <div className="p-4 bg-accent/10 rounded-full inline-block">
@@ -141,7 +141,7 @@ interface FeatureCardProps {
 
 function FeatureCard({ icon, title, description, link, linkText }: FeatureCardProps) {
   return (
-    <Card className="bg-card hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300 flex flex-col">
+    <Card className="bg-card transition-shadow duration-300 flex flex-col hover:shadow-[0_0_20px_3px_hsl(var(--accent)/0.35)]">
       <CardHeader className="items-center">
         <div className="mb-4 p-3 bg-accent/10 rounded-full">
           {icon}
@@ -161,3 +161,4 @@ function FeatureCard({ icon, title, description, link, linkText }: FeatureCardPr
     </Card>
   );
 }
+
