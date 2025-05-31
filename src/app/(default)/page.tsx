@@ -1,6 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, CircuitBoard, Lightbulb, SearchCheck } from "lucide-react";
+import { ArrowRight, CircuitBoard, Lightbulb, SearchCheck, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -58,6 +59,28 @@ export default function HomePage() {
             link="/ai-search"
             linkText="Try AI Search"
           />
+          <Card className="md:col-span-2 bg-card hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300">
+            <div className="flex flex-col md:flex-row items-center p-6 gap-6">
+              <div className="flex-shrink-0">
+                <div className="p-4 bg-accent/10 rounded-full inline-block">
+                  <Users className="h-12 w-12 text-accent" />
+                </div>
+              </div>
+              <div className="flex-grow text-center md:text-left">
+                <CardTitle className="font-headline text-2xl">Need Expert Advice?</CardTitle>
+                <CardDescription className="mt-2 text-lg">
+                  Our specialists are ready to help you select the best components for your unique project requirements. Get personalized recommendations and technical support.
+                </CardDescription>
+              </div>
+              <div className="flex-shrink-0 mt-4 md:mt-0">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Link href="/contact">
+                    Consult Our Experts <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
 
