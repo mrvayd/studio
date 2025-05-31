@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: 'Allied Electronics',
-  description: 'Your premier source for electronic components and expert services.',
+  description: 'complete solution of your problem',
 };
 
 export default function RootLayout({
@@ -15,10 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+        {/* Removed Google Font links for Inter and Space Grotesk */}
       </head>
       <body className="font-body antialiased">
         {children}
