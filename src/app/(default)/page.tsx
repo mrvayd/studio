@@ -33,12 +33,6 @@ const EngineerAdviceCard = () => (
 export default function HomePage() {
   return (
     <div className="space-y-16">
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <EngineerAdviceCard />
-        </div>
-      </section>
-
       <section className="relative text-center py-16 md:py-24 rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/10 via-background to-background">
         <div className="absolute inset-0 opacity-5">
             <Image 
