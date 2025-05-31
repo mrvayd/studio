@@ -21,22 +21,22 @@ export default function ProductCard({ product }: ProductCardProps) {
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             data-ai-hint={product.dataAiHint || "electronic component"}
           />
-          {/* Removed the color overlay div that was here */}
         </Link>
       </CardHeader>
-      <CardContent className="p-6 flex-grow">
+      <CardContent className="p-6 flex-grow flex flex-col">
         <CardTitle className="font-headline text-lg mb-2">
           <Link href={`/products/${product.id}`} className="hover:text-primary transition-colors">
             {product.name}
           </Link>
         </CardTitle>
-        <CardDescription className="text-sm text-muted-foreground mb-3 line-clamp-3">
+        <CardDescription className="text-sm text-muted-foreground mb-3 line-clamp-3 flex-grow">
           {product.shortDescription}
         </CardDescription>
-        <p className="font-semibold text-primary text-lg">
-          ${product.price.toFixed(2)}
-        </p>
+        <div className="mt-auto w-full bg-primary/10 text-primary py-3 px-4 rounded-lg text-center">
+          <span className="font-semibold text-xl">${product.price.toFixed(2)}</span>
+        </div>
       </CardContent>
     </Card>
   );
 }
+
