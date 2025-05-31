@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm, type SubmitHandler } from 'react-hook-form';
@@ -62,7 +63,7 @@ export default function ContactPage() {
         <p className="text-lg text-muted-foreground mb-8">
           Your message has been successfully sent. Our team will review it and get back to you as soon as possible.
         </p>
-        <Button onClick={() => setIsSubmitted(false)} className="bg-accent hover:bg-accent/90 text-accent-foreground">
+        <Button onClick={() => setIsSubmitted(false)} className="bg-accent hover:bg-accent/80 text-accent-foreground">
           Send Another Message
         </Button>
       </div>
