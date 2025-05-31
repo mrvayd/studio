@@ -1,0 +1,49 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import type { Product } from '@/data/products';
+import { ArrowRight } from 'lucide-react';
+
+interface ProductCardProps {
+  product: Product;
+}
+
+export default function ProductCard({ product }: ProductCardProps) {
+  return (
+    <Card className="flex flex-col overflow-hidden h-full bg-card hover:shadow-primary/20 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+      <CardHeader className="p-0">
+        <Link href={`/products/${product.id}`} className="block aspect-video relative overflow-hidden">
+          <Image
+            src={product.images[0] || "https://placehold.co/400x300.png"}
+            alt={product.name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            data-ai-hint={product.dataAiHint || "electronic component"}
+          />
+        </Link>
+      </CardHeader>
+      <CardContent className="p-6 flex-grow">
+        <CardTitle className="font-headline text-lg mb-2">
+          <Link href={`/products/${product.id}`} className="hover:text-primary transition-colors">
+            {product.name}
+          </Link>
+        </CardTitle>
+        <CardDescription className="text-sm text-muted-foreground mb-3 line-clamp-3">
+          {product.shortDescription}
+        </CardDescription>
+        <p className="font-semibold text-primary text-lg">
+          ${product.price.toFixed(2)}
+        </p>
+      </CardContent>
+      <CardFooter className="p-6 pt-0">
+        <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Link href={`/products/${product.id}`}>
+            View Details <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+}
