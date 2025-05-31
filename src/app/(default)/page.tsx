@@ -33,8 +33,8 @@ const EngineerAdviceCard = () => (
 export default function HomePage() {
   return (
     <div className="space-y-16">
-      <section className="relative text-center py-16 md:py-24 rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/10 via-background to-background">
-        <div className="absolute inset-0 opacity-5">
+      <section className="relative text-center py-16 md:py-24 rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/5 via-background to-background">
+        <div className="absolute inset-0 opacity-10">
             <Image 
                 src="https://placehold.co/1200x600.png" 
                 alt="Abstract Background" 
