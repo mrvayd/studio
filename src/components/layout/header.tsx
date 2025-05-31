@@ -32,8 +32,10 @@ export default function Header() {
       href={href}
       onClick={onClick}
       className={cn(
-        "flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
-        pathname === href ? "bg-accent text-accent-foreground" : "text-foreground/80 hover:text-foreground"
+        "flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+        pathname === href
+          ? "bg-accent text-accent-foreground" // Active state
+          : "text-foreground/80 hover:bg-muted/50 hover:text-foreground" // Inactive state and its hover
       )}
     >
       <Icon className="h-5 w-5" />
