@@ -14,15 +14,15 @@ const EngineerAdviceCard = () => (
         </div>
       </div>
       <div className="flex-grow text-center md:text-left">
-        <CardTitle className="font-headline text-2xl">Need Engineering Advice?</CardTitle>
+        <CardTitle className="font-headline text-2xl">Need Expert Advice?</CardTitle>
         <CardDescription className="mt-2 text-lg">
-          Our specialists are ready to help you select the best components for your unique project requirements. Get personalized recommendations and technical support from our engineers.
+          Our specialists are ready to help you select the best components for your unique project requirements. Get personalized recommendations and technical support from our experts.
         </CardDescription>
       </div>
       <div className="flex-shrink-0 mt-4 md:mt-0">
         <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
           <Link href="/contact">
-            Consult Our Engineers <ArrowRight className="ml-2 h-5 w-5" />
+            Consult Our Experts <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </Button>
       </div>
