@@ -46,11 +46,11 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 container mx-auto px-4">
           {/* Headline size adjusted during initial flutter theme update */}
-          <h1 className="font-headline text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+          <h1 className="font-nothing text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
             Allied Electronics
           </h1>
           {/* Subtitle margin and size adjusted during initial flutter theme update */}
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-foreground/70 sm:text-xl md:text-2xl">
+          <p className="mt-6 max-w-2xl mx-auto text-lg text-foreground/70 sm:text-xl md:text-2xl font-headline">
             complete solution of your problem
           </p>
           {/* Button container margin adjusted, button shadows removed during initial flutter theme update */}
@@ -116,7 +116,7 @@ export default function HomePage() {
         <h2 className="font-headline text-3xl font-bold mb-4 text-primary">
           Your Trusted Tech Partner
         </h2>
-        <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-8">
+        <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-8 font-body">
           At Allied Electronics, we provide top-quality computers, accessories, and expert repair services. Whether for work, gaming, or everyday use, we have the solutions to power your digital life.
         </p>
         <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
@@ -147,7 +147,7 @@ function FeatureCard({ icon, title, description, link, linkText }: FeatureCardPr
         <CardTitle className="font-headline text-xl text-center">{title}</CardTitle>
       </CardHeader>
       <CardContent className="text-center flex-grow">
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className="font-body">{description}</CardDescription>
       </CardContent>
       <CardFooter className="justify-center pt-4">
         <Button asChild variant="link" className="text-accent hover:text-accent/80">
