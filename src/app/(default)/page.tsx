@@ -15,7 +15,7 @@ const ExpertAdviceCard = () => (
       </div>
       <div className="flex-grow text-center md:text-left">
         <CardTitle className="font-headline text-2xl">Need Expert Advice?</CardTitle>
-        <CardDescription className="mt-2 text-lg">
+        <CardDescription className="mt-2 text-lg font-body">
           Our specialists are ready to help you select the best computers, accessories, or discuss repair options for your specific needs. Get personalized recommendations and technical support.
         </CardDescription>
       </div>
@@ -46,7 +46,7 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 container mx-auto px-4">
           {/* Headline size adjusted during initial flutter theme update */}
-          <h1 className="font-nothing text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+          <h1 className="font-nothing text-6xl font-bold tracking-tight sm:text-7xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
             Allied Electronics
           </h1>
           {/* Subtitle margin and size adjusted during initial flutter theme update */}
@@ -60,7 +60,7 @@ export default function HomePage() {
                 Browse Products <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 ease-in-out transform hover:scale-105">
+            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-muted/50 hover:text-foreground transition-all duration-300 ease-in-out transform hover:scale-105">
               <Link href="/contact">
                 Get Support
               </Link>
