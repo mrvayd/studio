@@ -3,6 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+// Example @font-face rule for your custom "Nothing Font 5x7".
+// 1. Make sure you have the font file (e.g., Nothing-Font-5x7.woff2) in your /public/fonts/ directory.
+// 2. Uncomment this block.
+// 3. Adjust the font-family name if needed to exactly match what you use in tailwind.config.ts.
+// 4. Adjust font-weight and font-style if your font file has specific variants.
+
+@font-face {
+  font-family: 'Nothing Font 5x7';
+  src: url('/fonts/Nothing-Font-5x7.woff2') format('woff2'); // Adjust filename if needed
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
 @layer base {
   :root {
     --background: 220 10% 12%; /* Dark Desaturated Blue-Gray (e.g., #1A1B1E) */

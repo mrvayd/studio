@@ -13,7 +13,7 @@ export default {
         body: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
         headline: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
         code: ['monospace'],
-        nothing: ['"Pixelify Sans"', 'monospace'],
+        nothing: ['"Nothing Font 5x7"', '"Pixelify Sans"', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
