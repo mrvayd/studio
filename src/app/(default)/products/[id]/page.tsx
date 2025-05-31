@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProductById, type ProductSpecification } from '@/data/products';
@@ -91,7 +92,11 @@ export default function ProductDetailsPage({ params }: { params: { id: string } 
           )}
           <p className="text-sm text-muted-foreground">SKU: <span className="font-medium text-foreground">{product.sku}</span></p>
 
-          <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-md" disabled={product.stock === 0}>
+          <Button 
+            size="lg" 
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-md h-12 px-10" 
+            disabled={product.stock === 0}
+          >
             <ShoppingCart className="mr-2 h-5 w-5" />
             Add to Cart
           </Button>
