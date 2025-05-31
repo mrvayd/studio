@@ -33,14 +33,14 @@ const EngineerAdviceCard = () => (
 export default function HomePage() {
   return (
     <div className="space-y-16">
-      <section className="relative text-center py-16 md:py-24 rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/5 via-background to-background">
-        <div className="absolute inset-0 opacity-10">
-            <Image 
-                src="https://placehold.co/1200x600.png" 
-                alt="Abstract Background" 
+      <section className="relative text-center py-16 md:py-24 rounded-xl overflow-hidden">
+        <div className="absolute inset-0 opacity-15">
+            <Image
+                src="https://placehold.co/1200x600.png"
+                alt="Abstract Background"
                 fill
                 objectFit="cover"
-                data-ai-hint="circuit technology" 
+                data-ai-hint="circuit technology"
             />
         </div>
         <div className="relative z-10 container mx-auto px-4">
@@ -51,12 +51,12 @@ export default function HomePage() {
             complete solution of your problem
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 ease-in-out transform hover:scale-105">
               <Link href="/browse">
                 Browse Products <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 ease-in-out transform hover:scale-105">
               <Link href="/contact">
                 Get Support
               </Link>
@@ -94,8 +94,8 @@ export default function HomePage() {
       </section>
 
       <section className="py-12 text-center">
-          <Image 
-            src="https://placehold.co/800x400.png" 
+          <Image
+            src="https://placehold.co/800x400.png"
             alt="Featured Electronic Components"
             width={800}
             height={400}
