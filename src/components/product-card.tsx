@@ -21,7 +21,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             data-ai-hint={product.dataAiHint || "electronic component"}
           />
-          <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-90 transition-opacity duration-300 ease-in-out"></div>
+          {/* Removed the color overlay div that was here */}
         </Link>
       </CardHeader>
       <CardContent className="p-6 flex-grow">
@@ -40,4 +40,3 @@ export default function ProductCard({ product }: ProductCardProps) {
     </Card>
   );
 }
-
