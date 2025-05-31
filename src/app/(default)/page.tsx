@@ -38,7 +38,7 @@ export default function HomePage() {
             <Image 
                 src="https://placehold.co/1200x600.png" 
                 alt="Abstract Background" 
-                layout="fill" 
+                fill
                 objectFit="cover"
                 data-ai-hint="circuit technology" 
             />
@@ -48,7 +48,7 @@ export default function HomePage() {
             Allied Electronics
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-lg text-foreground/80 sm:text-xl">
-            Your one-stop destination for high-quality electronic components, innovative tools, and expert solutions.
+            complete solution of your problem
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
