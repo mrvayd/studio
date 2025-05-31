@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Home, List, SlidersHorizontal, BrainCircuit } from 'lucide-react';
+import { Menu, X, Home, List, SlidersHorizontal, BrainCircuit, Laptop, Search } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
@@ -12,10 +12,9 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
-  { href: '/browse', label: 'Browse Products', icon: List },
-  { href: '/selector', label: 'Component Selector', icon: SlidersHorizontal },
-  { href: '/ai-search', label: 'AI Parametric Search', icon: BrainCircuit },
-  // { href: '/contact', label: 'Contact Us', icon: Mail }, // Removed Contact Us
+  { href: '/browse', label: 'Browse Products & Services', icon: List },
+  { href: '/selector', label: 'PC & Laptop Advisor', icon: Laptop },
+  { href: '/ai-search', label: 'AI Product Finder', icon: Search },
 ];
 
 export default function Header() {

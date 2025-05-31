@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useMemo, useEffect } from 'react';
@@ -12,17 +13,28 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useSearchParams } from 'next/navigation';
+
 
 export default function BrowsePage() {
+  const searchParams = useSearchParams();
+  const categoryQuery = searchParams.get('category');
+
   const [searchTerm, setSearchTerm] = useState('');
   const [products, setProducts] = useState<Product[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [selectedCategory, setSelectedCategory] = useState<string>(categoryQuery || "all");
   const [sortBy, setSortBy] = useState<string>("name-asc");
 
   useEffect(() => {
     // Simulate fetching products
     setProducts(mockProducts);
   }, []);
+
+  useEffect(() => {
+    if (categoryQuery) {
+      setSelectedCategory(categoryQuery);
+    }
+  }, [categoryQuery]);
   
   const categories = useMemo(() => {
     const allCategories = new Set(products.map(p => p.category));
@@ -67,10 +79,10 @@ export default function BrowsePage() {
       <header className="py-8 bg-card rounded-xl shadow-lg">
         <div className="container mx-auto text-center">
           <h1 className="font-headline text-4xl font-bold text-primary mb-4">
-            Product Catalog
+            Product & Service Catalog
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explore our wide selection of electronic components and tools. Use the search and filters to find exactly what you need.
+            Explore our range of computers, accessories, and expert repair services. Use the search and filters to find exactly what you need.
           </p>
         </div>
       </header>
@@ -81,7 +93,7 @@ export default function BrowsePage() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input
               type="search"
-              placeholder="Search products by name, description, or category..."
+              placeholder="Search for laptops, desktops, accessories, or services..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10 w-full"
@@ -124,7 +136,7 @@ export default function BrowsePage() {
       ) : (
         <div className="text-center py-12">
           <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />
-          <h3 className="font-headline text-xl font-semibold text-foreground mb-2">No Products Found</h3>
+          <h3 className="font-headline text-xl font-semibold text-foreground mb-2">No Products or Services Found</h3>
           <p className="text-muted-foreground">
             Try adjusting your search or filter criteria.
           </p>
@@ -133,3 +145,4 @@ export default function BrowsePage() {
     </div>
   );
 }
+

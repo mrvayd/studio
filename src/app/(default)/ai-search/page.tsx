@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -9,7 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { aiParametricSearch, type AiParametricSearchOutput } from '@/ai/flows/ai-parametric-search';
-import { BrainCircuit, Loader2, AlertTriangle, FileText, ChevronRight } from 'lucide-react';
+import { Search, Loader2, AlertTriangle, FileText, ChevronRight } from 'lucide-react'; // Changed BrainCircuit to Search
 import { useToast } from '@/hooks/use-toast';
 
 const searchSchema = z.object({
@@ -36,17 +37,19 @@ export default function AiSearchPage() {
     setResults(null);
     setError(null);
     try {
+      // The AI flow `aiParametricSearch` still expects 'part number' style input/output.
+      // This will need to be updated when the flow itself is refactored for computers/accessories.
       const output = await aiParametricSearch({ query: data.query });
       setResults(output);
       if (output.length === 0) {
         toast({
             title: "No Results",
-            description: "The AI couldn't find any matching parts for your query.",
+            description: "The AI couldn't find any matching products or services for your query.",
             variant: "default",
         });
       }
     } catch (e) {
-      console.error("AI Parametric Search Error:", e);
+      console.error("AI Product Finder Error:", e);
       const errorMessage = e instanceof Error ? e.message : "An unknown error occurred.";
       setError(`Failed to perform AI search: ${errorMessage}`);
       toast({
@@ -63,10 +66,10 @@ export default function AiSearchPage() {
     <div className="max-w-3xl mx-auto space-y-8">
       <Card className="shadow-xl border-primary/20">
         <CardHeader className="text-center">
-          <BrainCircuit className="mx-auto h-16 w-16 text-primary mb-4" />
-          <CardTitle className="font-headline text-3xl text-primary">AI Parametric Search</CardTitle>
+          <Search className="mx-auto h-16 w-16 text-primary mb-4" />
+          <CardTitle className="font-headline text-3xl text-primary">AI Product Finder</CardTitle>
           <CardDescription className="text-lg">
-            Enter a partial part number or describe the component you're looking for. Our AI will find matching parts.
+            Enter keywords, features, or model names. Our AI will find matching computers, accessories, or services.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -80,7 +83,7 @@ export default function AiSearchPage() {
                     <FormLabel className="text-base">Search Query</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="e.g., 'LM741 op-amp' or 'resistor 10k 1/4w'"
+                        placeholder="e.g., 'gaming laptop RTX 4070' or 'wireless ergonomic mouse'"
                         {...field}
                         className="text-base py-3"
                       />
@@ -97,7 +100,7 @@ export default function AiSearchPage() {
                   </>
                 ) : (
                   <>
-                    <BrainCircuit className="mr-2 h-5 w-5" />
+                    <Search className="mr-2 h-5 w-5" />
                     Search with AI
                   </>
                 )}
@@ -126,12 +129,14 @@ export default function AiSearchPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             {results.length > 0 ? (
+              // The structure of `item` (partNumber, description) comes from the *current*
+              // ai-parametric-search flow. This will change when that flow is updated for computers.
               results.map((item, index) => (
                 <Card key={index} className="bg-card/50 hover:shadow-md transition-shadow">
                   <CardHeader>
                     <CardTitle className="text-lg flex items-center gap-2">
                       <FileText className="h-5 w-5 text-primary"/> 
-                      {item.partNumber}
+                      {item.partNumber} {/* This should become item.name or item.model */}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -139,13 +144,13 @@ export default function AiSearchPage() {
                   </CardContent>
                   <CardFooter>
                     <Button variant="link" className="text-accent p-0 h-auto">
-                        View Potential Matches <ChevronRight className="h-4 w-4 ml-1"/>
+                        View Details <ChevronRight className="h-4 w-4 ml-1"/>
                     </Button>
                   </CardFooter>
                 </Card>
               ))
             ) : (
-              <p className="text-muted-foreground text-center py-4">No matching parts found for your query.</p>
+              <p className="text-muted-foreground text-center py-4">No matching products or services found for your query.</p>
             )}
           </CardContent>
         </Card>

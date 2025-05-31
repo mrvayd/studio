@@ -1,11 +1,11 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Lightbulb, SearchCheck, Users } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { ArrowRight, Lightbulb, SearchCheck, Users, Wrench, Laptop, HardDrive } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const EngineerAdviceCard = () => (
+const ExpertAdviceCard = () => (
   <Card className="bg-card hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300">
     <div className="flex flex-col md:flex-row items-center p-6 gap-6">
       <div className="flex-shrink-0">
@@ -16,7 +16,7 @@ const EngineerAdviceCard = () => (
       <div className="flex-grow text-center md:text-left">
         <CardTitle className="font-headline text-2xl">Need Expert Advice?</CardTitle>
         <CardDescription className="mt-2 text-lg">
-          Our specialists are ready to help you select the best components for your unique project requirements. Get personalized recommendations and technical support from our experts.
+          Our specialists are ready to help you select the best computers, accessories, or discuss repair options for your specific needs. Get personalized recommendations and technical support.
         </CardDescription>
       </div>
       <div className="flex-shrink-0 mt-4 md:mt-0">
@@ -38,10 +38,10 @@ export default function HomePage() {
         <div className="absolute inset-0 opacity-15"> {/* Opacity was set to 15 during flutter theme update */}
             <Image
                 src="https://placehold.co/1200x600.png"
-                alt="Abstract Background"
+                alt="Abstract Background of Computer Technology"
                 fill
                 objectFit="cover"
-                data-ai-hint="circuit technology"
+                data-ai-hint="computer technology"
             />
         </div>
         <div className="relative z-10 container mx-auto px-4">
@@ -71,28 +71,35 @@ export default function HomePage() {
 
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <EngineerAdviceCard />
+          <ExpertAdviceCard />
         </div>
       </section>
 
       <section className="py-12">
         <h2 className="font-headline text-3xl font-bold text-center mb-12 text-primary">
-          Explore Our Features
+          Explore Our Services & Tools
         </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 container mx-auto px-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 container mx-auto px-4">
           <FeatureCard
-            icon={<Lightbulb className="h-10 w-10 text-accent" />}
-            title="Component Selection Tool"
-            description="Not sure what you need? Our interactive tool helps you find the perfect component for your project."
+            icon={<Laptop className="h-10 w-10 text-accent" />}
+            title="PC & Laptop Advisor"
+            description="Not sure which computer fits your needs? Our AI tool helps you find the perfect system."
             link="/selector"
-            linkText="Find Components"
+            linkText="Find Your PC"
           />
           <FeatureCard
             icon={<SearchCheck className="h-10 w-10 text-accent" />}
-            title="AI Parametric Search"
-            description="Leverage AI to find parts with partial numbers or descriptions. Get smart suggestions instantly."
+            title="AI Product Finder"
+            description="Use AI to search for specific computers, accessories, or parts with keywords or features."
             link="/ai-search"
             linkText="Try AI Search"
+          />
+          <FeatureCard
+            icon={<Wrench className="h-10 w-10 text-accent" />}
+            title="Expert Repair Services"
+            description="Reliable PC and laptop repairs, from screen replacements to performance tune-ups."
+            link="/browse?category=Repair+Services" // Link to repair services category
+            linkText="View Repair Options"
           />
         </div>
       </section>
@@ -100,21 +107,21 @@ export default function HomePage() {
       <section className="py-12 text-center">
           <Image
             src="https://placehold.co/800x400.png"
-            alt="Featured Electronic Components"
+            alt="Modern Laptops and Desktops"
             width={800}
             height={400}
             className="mx-auto rounded-lg shadow-xl mb-8"
-            data-ai-hint="components array"
+            data-ai-hint="laptops desktops"
           />
         <h2 className="font-headline text-3xl font-bold mb-4 text-primary">
-          Powering Your Innovations
+          Your Trusted Tech Partner
         </h2>
         <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-8">
-          At Allied Electronics, we are committed to providing the components and support you need to bring your electronic projects to life. From hobbyists to professionals, we've got you covered.
+          At Allied Electronics, we provide top-quality computers, accessories, and expert repair services. Whether for work, gaming, or everyday use, we have the solutions to power your digital life.
         </p>
         <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
           <Link href="/contact">
-            Contact Our Engineers
+            Contact Our Tech Experts
           </Link>
         </Button>
       </section>
@@ -132,21 +139,23 @@ interface FeatureCardProps {
 
 function FeatureCard({ icon, title, description, link, linkText }: FeatureCardProps) {
   return (
-    <Card className="bg-card hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300">
+    <Card className="bg-card hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300 flex flex-col">
       <CardHeader className="items-center">
         <div className="mb-4 p-3 bg-accent/10 rounded-full">
           {icon}
         </div>
         <CardTitle className="font-headline text-xl text-center">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="text-center">
+      <CardContent className="text-center flex-grow">
         <CardDescription>{description}</CardDescription>
-        <Button asChild variant="link" className="mt-4 text-accent hover:text-accent/80">
+      </CardContent>
+      <CardFooter className="justify-center pt-4">
+        <Button asChild variant="link" className="text-accent hover:text-accent/80">
           <Link href={link}>
             {linkText} <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
-      </CardContent>
+      </CardFooter>
     </Card>
   );
 }

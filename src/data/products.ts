@@ -1,3 +1,4 @@
+
 export interface ProductSpecification {
   name: string;
   value: string;
@@ -20,119 +21,148 @@ export interface Product {
 
 export const mockProducts: Product[] = [
   {
-    id: "arduino-uno-r3",
-    name: "Arduino Uno R3",
-    category: "Microcontrollers",
-    price: 23.00,
-    shortDescription: "The classic Arduino board for beginners and experts.",
-    description: "The Arduino Uno R3 is a microcontroller board based on the ATmega328P. It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB connection, a power jack, an ICSP header and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.",
+    id: "ultrabook-x1",
+    name: "UltraBook X1 - Thin & Light",
+    category: "Laptops",
+    price: 1299.00,
+    shortDescription: "Powerful and sleek ultrabook for professionals on the go.",
+    description: "The UltraBook X1 combines cutting-edge performance with an incredibly thin and light design. Featuring the latest Intel Core i7 processor, 16GB of RAM, a 1TB NVMe SSD, and a stunning 14-inch QHD+ display, it's built for productivity and portability. Long battery life and premium build quality make it the perfect companion for any task.",
     images: [
-      "https://placehold.co/600x400.png",
       "https://placehold.co/600x400.png",
       "https://placehold.co/600x400.png",
     ],
     specifications: [
-      { name: "Microcontroller", value: "ATmega328P" },
-      { name: "Operating Voltage", value: "5V" },
-      { name: "Input Voltage (recommended)", value: "7-12V" },
-      { name: "Digital I/O Pins", value: "14 (6 PWM)" },
-      { name: "Analog Input Pins", value: "6" },
-      { name: "Flash Memory", value: "32 KB" },
-      { name: "SRAM", value: "2 KB" },
-      { name: "EEPROM", value: "1 KB" },
-      { name: "Clock Speed", value: "16 MHz" },
+      { name: "Processor", value: "Intel Core i7 (13th Gen)" },
+      { name: "RAM", value: "16GB LPDDR5" },
+      { name: "Storage", value: "1TB NVMe SSD" },
+      { name: "Display", value: "14-inch QHD+ (2560x1600)" },
+      { name: "Graphics", value: "Intel Iris Xe Graphics" },
+      { name: "Operating System", value: "Windows 11 Pro" },
+      { name: "Weight", value: "1.2 kg" },
     ],
-    stock: 150,
-    sku: "SKU-UNO-R3",
-    manufacturer: "Arduino",
-    dataAiHint: "arduino microcontroller"
+    stock: 75,
+    sku: "SKU-UBX1-I7-16G-1T",
+    manufacturer: "FutureTech",
+    dataAiHint: "laptop computer"
   },
   {
-    id: "raspberry-pi-4b-4gb",
-    name: "Raspberry Pi 4 Model B (4GB)",
-    category: "Single-Board Computers",
-    price: 55.00,
-    shortDescription: "Powerful single-board computer for various projects.",
-    description: "The Raspberry Pi 4 Model B offers a significant increase in processor speed, multimedia performance, memory, and connectivity compared to the prior-generation Raspberry Pi 3 Model B+, while retaining backwards compatibility and similar power consumption. For the end user, Raspberry Pi 4 Model B provides desktop performance comparable to entry-level x86 PC systems.",
+    id: "gaming-rig-z9000",
+    name: "Gaming Rig Z9000 Desktop",
+    category: "Desktop PCs",
+    price: 2499.00,
+    shortDescription: "Ultimate gaming desktop with top-tier components.",
+    description: "Experience unparalleled gaming performance with the Gaming Rig Z9000. Equipped with a high-end AMD Ryzen 9 processor, NVIDIA GeForce RTX 4080 graphics card, 32GB of DDR5 RAM, and a 2TB Gen4 NVMe SSD. Custom liquid cooling and a stunning tempered glass case with RGB lighting complete this powerhouse.",
     images: [
+      "https://placehold.co/600x400.png",
       "https://placehold.co/600x400.png",
       "https://placehold.co/600x400.png",
     ],
     specifications: [
-      { name: "Processor", value: "Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz" },
-      { name: "Memory", value: "4GB LPDDR4-3200 SDRAM" },
-      { name: "Connectivity", value: "2.4 GHz and 5.0 GHz IEEE 802.11ac wireless, Bluetooth 5.0, BLE, Gigabit Ethernet" },
-      { name: "USB", value: "2 USB 3.0 ports; 2 USB 2.0 ports." },
-      { name: "Video & sound", value: "2 × micro-HDMI ports (up to 4kp60 supported)" },
+      { name: "Processor", value: "AMD Ryzen 9 7950X" },
+      { name: "RAM", value: "32GB DDR5 6000MHz" },
+      { name: "Storage", value: "2TB Gen4 NVMe SSD + 2TB HDD" },
+      { name: "Graphics Card", value: "NVIDIA GeForce RTX 4080 16GB" },
+      { name: "Motherboard", value: "X670E Chipset" },
+      { name: "Cooling", value: "Custom Liquid Cooling Loop" },
+      { name: "Case", value: "Mid-Tower ATX, Tempered Glass, RGB" },
     ],
-    stock: 85,
-    sku: "SKU-RPI4-4GB",
-    manufacturer: "Raspberry Pi Foundation",
-    dataAiHint: "raspberrypi computer"
+    stock: 30,
+    sku: "SKU-GRZ9-R9-32G-2T",
+    manufacturer: "Apex Gaming",
+    dataAiHint: "gaming desktop"
   },
   {
-    id: "resistor-kit-1ohm-1mohm",
-    name: "Resistor Kit (1 Ohm - 1M Ohm, 1/4W)",
-    category: "Passive Components",
-    price: 12.99,
-    shortDescription: "Assorted resistor kit with common values.",
-    description: "A comprehensive kit of 1/4 Watt, +/- 1% tolerance metal film resistors. Includes a variety of commonly used values from 1 Ohm to 1M Ohm, perfect for breadboarding and prototyping electronic circuits. Comes organized in a convenient storage box.",
+    id: "ergo-keyboard-mk7",
+    name: "ErgoPro Mechanical Keyboard MK7",
+    category: "PC Accessories",
+    price: 179.99,
+    shortDescription: "Premium ergonomic mechanical keyboard for comfort and speed.",
+    description: "The ErgoPro MK7 is designed for ultimate typing comfort and performance. It features a split ergonomic layout, tactile mechanical switches (Cherry MX Brown equivalent), PBT keycaps, customizable RGB backlighting, and programmable macros. Connect via USB-C or Bluetooth.",
     images: [
       "https://placehold.co/600x400.png",
     ],
     specifications: [
-      { name: "Type", value: "Metal Film Resistors" },
-      { name: "Power Rating", value: "1/4 Watt" },
-      { name: "Tolerance", value: "±1%" },
-      { name: "Range", value: "1Ω to 1MΩ (multiple values)" },
-      { name: "Quantity", value: "Approx. 500 pieces (25 values, 20 pcs each)" },
-    ],
-    stock: 200,
-    sku: "SKU-RESKIT-001",
-    dataAiHint: "resistors kit"
-  },
-  {
-    id: "capacitor-kit-electrolytic",
-    name: "Electrolytic Capacitor Kit",
-    category: "Passive Components",
-    price: 15.50,
-    shortDescription: "Variety pack of common electrolytic capacitors.",
-    description: "This kit includes a wide range of electrolytic capacitors with various capacitance values and voltage ratings. Essential for power supply filtering, audio coupling, and timing circuits. Organized in a durable plastic case for easy access.",
-    images: [
-      "https://placehold.co/600x400.png",
-    ],
-    specifications: [
-      { name: "Type", value: "Electrolytic Capacitors" },
-      { name: "Voltage Range", value: "10V to 50V" },
-      { name: "Capacitance Range", value: "0.1uF to 1000uF" },
-      { name: "Quantity", value: "Approx. 200 pieces (multiple values)" },
+      { name: "Type", value: "Mechanical Keyboard" },
+      { name: "Layout", value: "Split Ergonomic, 75%" },
+      { name: "Switches", value: "Tactile Mechanical (Brown)" },
+      { name: "Keycaps", value: "Double-shot PBT" },
+      { name: "Connectivity", value: "USB-C, Bluetooth 5.1" },
+      { name: "Features", value: "RGB Backlighting, Programmable Macros" },
     ],
     stock: 120,
-    sku: "SKU-CAPKIT-ELY-001",
-    dataAiHint: "capacitors kit"
+    sku: "SKU-EKMK7-BRN",
+    manufacturer: "ComfortKey",
+    dataAiHint: "mechanical keyboard"
   },
   {
-    id: "soldering-iron-kit-60w",
-    name: "Soldering Iron Kit (60W Adjustable)",
-    category: "Tools & Equipment",
-    price: 25.99,
-    shortDescription: "Complete soldering kit for electronics work.",
-    description: "A 60W adjustable temperature soldering iron kit, ideal for hobbyists and professionals. Includes soldering iron, multiple tips, solder wire, desoldering pump, stand, and tweezers. Temperature range from 200°C to 450°C.",
+    id: "laptop-screen-repair",
+    name: "Laptop Screen Replacement Service",
+    category: "Repair Services",
+    price: 149.00, // Starting price
+    shortDescription: "Professional screen replacement for most laptop models.",
+    description: "Cracked or malfunctioning laptop screen? Our expert technicians provide fast and reliable screen replacement services for a wide range of laptop brands and models. Price varies based on screen type and laptop model. Includes a 90-day warranty on parts and labor. Contact us for a quote.",
     images: [
       "https://placehold.co/600x400.png",
     ],
     specifications: [
-      { name: "Power", value: "60W" },
-      { name: "Temperature Range", value: "200°C - 450°C (Adjustable)" },
-      { name: "Includes", value: "Soldering Iron, 5 Tips, Solder, Pump, Stand, Tweezers" },
-      { name: "Voltage", value: "110V / 220V (selectable)" },
+      { name: "Service Type", value: "Screen Replacement" },
+      { name: "Applicable Devices", value: "Most Laptop Models (consult for compatibility)" },
+      { name: "Turnaround Time", value: "Typically 1-3 business days" },
+      { name: "Warranty", value: "90-day on parts and labor" },
+      { name: "Pricing", value: "Starting from $149 (varies by model)" },
     ],
-    stock: 70,
-    sku: "SKU-SOLKIT-60W",
-    dataAiHint: "soldering kit"
+    stock: 999, // Represents service availability
+    sku: "SKU-REPAIR-SCRN",
+    manufacturer: "Allied Electronics Services",
+    dataAiHint: "laptop repair"
+  },
+  {
+    id: "4k-monitor-proart",
+    name: "ProArt 27-inch 4K UHD Monitor",
+    category: "PC Accessories",
+    price: 499.00,
+    shortDescription: "Color-accurate 4K monitor for creative professionals.",
+    description: "The ProArt 27-inch monitor delivers stunning 4K UHD resolution with exceptional color accuracy (100% sRGB, 99% Adobe RGB). Factory pre-calibrated for ΔE < 2. Ideal for photo editing, video production, and graphic design. Features USB-C connectivity with power delivery.",
+    images: [
+      "https://placehold.co/600x400.png",
+    ],
+    specifications: [
+      { name: "Screen Size", value: "27-inch" },
+      { name: "Resolution", value: "4K UHD (3840 x 2160)" },
+      { name: "Panel Type", value: "IPS" },
+      { name: "Color Gamut", value: "100% sRGB, 99% Adobe RGB" },
+      { name: "Connectivity", value: "HDMI, DisplayPort, USB-C (PD 90W)" },
+      { name: "Features", value: "HDR10, Factory Calibrated" },
+    ],
+    stock: 60,
+    sku: "SKU-MON-PA27-4K",
+    manufacturer: "VisionWorks",
+    dataAiHint: "computer monitor"
+  },
+  {
+    id: "pc-tuneup-service",
+    name: "PC Performance Tune-Up Service",
+    category: "Repair Services",
+    price: 79.00,
+    shortDescription: "Optimize your PC's speed and stability.",
+    description: "Is your PC running slow? Our tune-up service includes system diagnostics, junk file removal, startup optimization, driver updates, and security checks to get your computer running smoothly again. Suitable for both desktops and laptops.",
+    images: [
+      "https://placehold.co/600x400.png",
+    ],
+    specifications: [
+      { name: "Service Type", value: "PC Optimization & Cleaning" },
+      { name: "Includes", value: "Diagnostics, Software Cleaning, Driver Updates, Security Check" },
+      { name: "Applicable Devices", value: "Desktops & Laptops" },
+      { name: "Delivery", value: "Remote or In-Store" },
+    ],
+    stock: 999, // Service availability
+    sku: "SKU-REPAIR-TUNEUP",
+    manufacturer: "Allied Electronics Services",
+    dataAiHint: "pc service"
   }
 ];
 
 export function getProductById(id: string): Product | undefined {
   return mockProducts.find(p => p.id === id);
 }
+
