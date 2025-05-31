@@ -5,7 +5,7 @@ import { ArrowRight, CircuitBoard, Lightbulb, SearchCheck, Users } from "lucide-
 import Image from "next/image";
 import Link from "next/link";
 
-const ExpertAdviceCard = () => (
+const EngineerAdviceCard = () => (
   <Card className="bg-card hover:shadow-primary/20 hover:shadow-lg transition-shadow duration-300">
     <div className="flex flex-col md:flex-row items-center p-6 gap-6">
       <div className="flex-shrink-0">
@@ -14,15 +14,15 @@ const ExpertAdviceCard = () => (
         </div>
       </div>
       <div className="flex-grow text-center md:text-left">
-        <CardTitle className="font-headline text-2xl">Need Expert Advice?</CardTitle>
+        <CardTitle className="font-headline text-2xl">Need Engineering Advice?</CardTitle>
         <CardDescription className="mt-2 text-lg">
-          Our specialists are ready to help you select the best components for your unique project requirements. Get personalized recommendations and technical support.
+          Our specialists are ready to help you select the best components for your unique project requirements. Get personalized recommendations and technical support from our engineers.
         </CardDescription>
       </div>
       <div className="flex-shrink-0 mt-4 md:mt-0">
         <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
           <Link href="/contact">
-            Consult Our Experts <ArrowRight className="ml-2 h-5 w-5" />
+            Consult Our Engineers <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </Button>
       </div>
@@ -35,7 +35,7 @@ export default function HomePage() {
     <div className="space-y-16">
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <ExpertAdviceCard />
+          <EngineerAdviceCard />
         </div>
       </section>
 
@@ -73,7 +73,7 @@ export default function HomePage() {
 
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <ExpertAdviceCard />
+          <EngineerAdviceCard />
         </div>
       </section>
 
@@ -116,7 +116,7 @@ export default function HomePage() {
         </p>
         <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
           <Link href="/contact">
-            Contact Our Experts
+            Contact Our Engineers
           </Link>
         </Button>
       </section>
