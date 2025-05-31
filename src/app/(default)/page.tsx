@@ -47,8 +47,7 @@ export default function HomePage() {
         <div className="relative z-10 container mx-auto px-4">
           {/* Headline size adjusted during initial flutter theme update */}
           <h1
-            className="inline-block font-nothing text-6xl font-bold tracking-tight sm:text-7xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
-            style={{ clipPath: 'polygon(0% 0%, 92% 0%, 100% 100%, 0% 100%)' }}
+            className="font-nothing text-6xl font-bold tracking-tight sm:text-7xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
           >
             Allied Electronics
           </h1>
@@ -162,3 +161,4 @@ function FeatureCard({ icon, title, description, link, linkText }: FeatureCardPr
     </Card>
   );
 }
+
