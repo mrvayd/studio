@@ -65,7 +65,7 @@ export default function ProductDetailsPage({ params }: { params: { id: string } 
           <Badge variant="outline" className="text-sm text-primary border-primary">{product.category}</Badge>
           <h1 className="font-headline text-3xl lg:text-4xl font-bold text-primary">{product.name}</h1>
           
-          <p className="text-2xl font-semibold text-accent">${product.price.toFixed(2)}</p>
+          <p className="text-2xl font-semibold text-accent">₹{product.price.toFixed(2)}</p>
           
           <Card className="bg-card/50">
             <CardContent className="p-4">

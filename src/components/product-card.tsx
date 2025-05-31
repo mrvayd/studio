@@ -33,10 +33,9 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.shortDescription}
         </CardDescription>
         <div className="mt-auto w-full bg-primary/10 text-primary py-3 px-4 rounded-lg text-center">
-          <span className="font-semibold text-xl">${product.price.toFixed(2)}</span>
+          <span className="font-semibold text-xl">₹{product.price.toFixed(2)}</span>
         </div>
       </CardContent>
     </Card>
   );
 }
-
