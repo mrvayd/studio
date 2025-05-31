@@ -7,11 +7,11 @@ export default function Footer() {
         <div className="flex items-center gap-2">
           <Cpu size={24} className="text-primary" />
           <p className="text-sm text-muted-foreground font-headline">
-            Allied Electron Emporium
+            Allied Electronics
           </p>
         </div>
         <p className="text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Allied Electron Emporium. All rights reserved.
+          &copy; {new Date().getFullYear()} Allied Electronics. All rights reserved.
         </p>
         <div className="flex space-x-4">
           {/* Add social media links or other footer links here if needed */}

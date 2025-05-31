@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     return { title: "Product Not Found" };
   }
   return {
-    title: `${product.name} | Allied Electron Emporium`,
+    title: `${product.name} | Allied Electronics`,
     description: product.shortDescription,
   };
 }

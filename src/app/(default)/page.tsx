@@ -45,7 +45,7 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-            Allied Electron Emporium
+            Allied Electronics
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-lg text-foreground/80 sm:text-xl">
             Your one-stop destination for high-quality electronic components, innovative tools, and expert solutions.
@@ -106,7 +106,7 @@ export default function HomePage() {
           Powering Your Innovations
         </h2>
         <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-8">
-          At Allied Electron Emporium, we are committed to providing the components and support you need to bring your electronic projects to life. From hobbyists to professionals, we've got you covered.
+          At Allied Electronics, we are committed to providing the components and support you need to bring your electronic projects to life. From hobbyists to professionals, we've got you covered.
         </p>
         <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
           <Link href="/contact">
