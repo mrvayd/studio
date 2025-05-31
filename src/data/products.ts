@@ -92,7 +92,7 @@ export const mockProducts: Product[] = [
     stock: 120,
     sku: "SKU-EKMK7-BRN",
     manufacturer: "ComfortKey",
-    dataAiHint: "mechanical keyboard"
+    dataAiHint: "RGB keyboard"
   },
   {
     id: "laptop-screen-repair",
