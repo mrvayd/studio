@@ -97,7 +97,7 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'text-shine': 'textShine 7s linear forwards', // 3.5s per sweep, 2 sweeps
+        'text-shine': 'textShine 1s linear forwards', 
       },
     },
   },
