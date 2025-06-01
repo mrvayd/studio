@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { ArrowRight, Lightbulb, SearchCheck, Users, Wrench, Laptop, HardDrive } from "lucide-react";
+import { ArrowRight, Users, Wrench, Laptop, SearchCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,15 +37,14 @@ export default function HomePage() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsMounted(true), 100); // Slight delay for animation trigger
+    const timer = setTimeout(() => setIsMounted(true), 100); 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="space-y-16">
-      {/* Hero Section with Flutter.dev inspired background gradient and image opacity */}
       <section className="relative text-center py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-background rounded-xl overflow-hidden shadow-2xl">
-        <div className="absolute inset-0 opacity-15"> {/* Opacity was set to 15 during flutter theme update */}
+        <div className="absolute inset-0 opacity-15">
             <Image
                 src="https://placehold.co/1200x600.png"
                 alt="Abstract Background of Computer Technology"
@@ -56,9 +55,15 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <h1
-            className={`whitespace-nowrap font-nothing text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent
-                       ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}
-                       transition-all ease-out duration-700 delay-200`}
+            className={`
+              whitespace-nowrap font-nothing text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl 
+              text-transparent bg-clip-text 
+              bg-[linear-gradient(to_right,theme(colors.primary.DEFAULT)_0%,theme(colors.accent.DEFAULT)_25%,theme(colors.primary.DEFAULT)_50%,theme(colors.accent.DEFAULT)_75%,theme(colors.primary.DEFAULT)_100%)]
+              bg-[length:250%_auto]
+              animate-text-shine
+              ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}
+              transition-all ease-out duration-700 delay-200
+            `}
           >
             Allied Electronics
           </h1>
@@ -117,7 +122,7 @@ export default function HomePage() {
             icon={<Wrench className="h-10 w-10 text-accent" />}
             title="Expert Repair Services"
             description="Reliable PC and laptop repairs, from screen replacements to performance tune-ups."
-            link="/browse?category=Repair+Services" // Link to repair services category
+            link="/browse?category=Repair+Services" 
             linkText="View Repair Options"
           />
         </div>
