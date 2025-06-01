@@ -52,7 +52,7 @@
     --radius: 0.75rem;
 
     /* Sidebar light theme variables */
-    --sidebar-background: 220 10% 96%; 
+    --sidebar-background: 220 10% 96%;
     --sidebar-foreground: 220 10% 20%;
     --sidebar-primary: 198 98% 53%;
     --sidebar-primary-foreground: 0 0% 98%;
@@ -98,7 +98,7 @@
     --ring: 198 98% 53%; /* Vibrant Blue for focus rings */
 
     /* Sidebar dark theme variables */
-    --sidebar-background: 220 10% 10%; 
+    --sidebar-background: 220 10% 10%;
     --sidebar-foreground: 210 40% 95%;
     --sidebar-primary: 198 98% 53%;
     --sidebar-primary-foreground: 0 0% 98%;
@@ -118,15 +118,17 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Ensure smooth transitions for the main page background and text color */
     transition-property: background-color, color;
     transition-duration: 400ms;
     transition-timing-function: ease-in-out;
   }
 
-  /* Apply smooth transitions to common container elements for theme changes. */
+  /* Apply smooth transitions to common container elements (including cards which are divs) for theme changes. */
+  /* The order of properties here is not functionally critical but ensures explicitness. */
   div, main, header, footer, section, article, aside, nav,
   button, input, textarea, select {
-    transition-property: background-color, color, border-color, box-shadow;
+    transition-property: color, background-color, border-color, box-shadow;
     transition-duration: 400ms;
     transition-timing-function: ease-in-out;
   }
