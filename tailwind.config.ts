@@ -90,14 +90,14 @@ export default {
           },
         },
         textShine: {
-          '0%': { backgroundPosition: '-200% center' },
-          '100%': { backgroundPosition: '200% center' },
+          '0%, 50.01%': { backgroundPosition: '-200% center' }, // Start of sweep 1, and start of sweep 2 (after reset)
+          '49.99%, 100%': { backgroundPosition: '200% center' }  // End of sweep 1, and end of sweep 2 (final state)
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'text-shine': 'textShine 2s linear forwards',
+        'text-shine': 'textShine 7s linear forwards', // 3.5s per sweep, 2 sweeps
       },
     },
   },
