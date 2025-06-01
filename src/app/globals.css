@@ -124,15 +124,13 @@
   }
 
   /* Apply smooth transitions to common container elements for theme changes. */
-  /* This targets elements that often use theme variables for background, text, and borders. */
-  /* We avoid targeting interactive elements like buttons or inputs directly here to prevent overriding their specific interaction transitions. */
-  div, main, header, footer, section, article, aside, nav {
-    transition-property: background-color, color, border-color;
+  div, main, header, footer, section, article, aside, nav,
+  button, input, textarea, select {
+    transition-property: background-color, color, border-color, box-shadow;
     transition-duration: 400ms;
     transition-timing-function: ease-in-out;
   }
   
-  /* Text elements like p, h1-h6, span, li will typically inherit color and its transition from their parent containers. */
   /* SVG icons using 'currentColor' for fill/stroke will also transition smoothly. */
   svg {
     transition-property: fill, stroke;
