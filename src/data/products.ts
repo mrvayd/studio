@@ -35,20 +35,20 @@ const softwareTemplate: Omit<Product, 'id' | 'sku' | 'name' | 'shortDescription'
 export const mockProducts: Product[] = [
   {
     ...serviceTemplate,
-    id: "service-scrn1",
-    name: "Laptop Screen Replacement Service",
+    id: "service-scrn-complete",
+    name: "Complete Screen Service",
     price: 4500.00,
-    shortDescription: "Professional screen replacement for cracked or malfunctioning laptop displays.",
-    description: "Accidents happen. If you've cracked your laptop screen or it's displaying issues like dead pixels or flickering, our expert technicians can help. We offer professional screen replacement services for a wide range of laptop makes and models. We use high-quality replacement parts to ensure your laptop looks and functions like new. Price may vary depending on the laptop model and screen type. Contact us for a quote.",
+    shortDescription: "Comprehensive screen service for cracked or malfunctioning laptop displays.",
+    description: "Accidents happen. If you've cracked your laptop screen or it's displaying issues like dead pixels or flickering, our expert technicians can help. Our Complete Screen Service covers professional replacement for a wide range of laptop makes and models. We use high-quality replacement parts to ensure your laptop looks and functions like new. Price may vary depending on the laptop model and screen type. Contact us for a quote.",
     images: ["https://placehold.co/600x400.png"],
     specifications: [
-      { name: "Service Type", value: "Screen Replacement" },
+      { name: "Service Type", value: "Complete Screen Replacement" },
       { name: "Common Issues", value: "Cracked screen, Dead pixels, Flickering, Backlight issues" },
       { name: "Turnaround Time", value: "1-3 business days (average)" },
       { name: "Warranty", value: "90-day warranty on parts and labor" }
     ],
-    sku: "AE-SVC-SCRNREP-001",
-    dataAiHint: "laptop repair"
+    sku: "AE-SVC-SCRNCMPLT-001",
+    dataAiHint: "laptop repair screen"
   },
   {
     ...serviceTemplate,
@@ -70,7 +70,7 @@ export const mockProducts: Product[] = [
     ...serviceTemplate,
     id: "service-mb1",
     name: "Laptop Motherboard Repair Service",
-    price: 8000.00, 
+    price: 8000.00,
     shortDescription: "Expert diagnosis and repair for laptop motherboard issues.",
     description: "Facing issues like no power, unexpected shutdowns, or component failures? Your laptop's motherboard might be the culprit. Our skilled technicians offer comprehensive motherboard repair services, including component-level repairs, BGA reballing/reflowing, and trace repairs. Due to the complexity, a diagnostic fee may apply, which will be credited towards the final repair cost. Contact us for an assessment.",
     images: ["https://placehold.co/600x400.png"],
@@ -243,3 +243,5 @@ export const mockProducts: Product[] = [
 export function getProductById(id: string): Product | undefined {
   return mockProducts.find(p => p.id === id);
 }
+
+    
