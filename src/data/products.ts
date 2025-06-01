@@ -25,6 +25,12 @@ const serviceTemplate: Omit<Product, 'id' | 'sku' | 'name' | 'shortDescription' 
   stock: 100, // Represents service availability
 };
 
+const softwareTemplate: Omit<Product, 'id' | 'sku' | 'name' | 'shortDescription' | 'description' | 'images' | 'specifications' | 'dataAiHint' | 'manufacturer'> & { category: string; price: number; stock: number } = {
+  category: "Security Software",
+  price: 0, // Base price, specific software will override
+  stock: 500, // Represents licenses available
+};
+
 
 export const mockProducts: Product[] = [
   {
@@ -177,6 +183,60 @@ export const mockProducts: Product[] = [
     sku: "CV-MON-32CQHD",
     manufacturer: "ConnectView Solutions",
     dataAiHint: "curved monitor productivity"
+  },
+  {
+    ...softwareTemplate,
+    id: "sw-kasp-ts-1y1d",
+    name: "Kaspersky Total Security (1 Year, 1 Device)",
+    price: 3000.00,
+    shortDescription: "Comprehensive protection against viruses, malware, and online threats.",
+    description: "Kaspersky Total Security provides premium protection for your devices. It safeguards your privacy, money, identity, photos, and family against online dangers. Includes antivirus, anti-ransomware, webcam security, VPN, and more.",
+    images: ["https://placehold.co/400x300.png"],
+    specifications: [
+      { name: "Protection Type", value: "Antivirus, Anti-Malware, Firewall, VPN" },
+      { name: "Key Features", value: "Real-time protection, Secure Browsing, Parental Controls, Password Manager" },
+      { name: "Subscription Term", value: "1 Year" },
+      { name: "Device Limit", value: "1 Device" }
+    ],
+    sku: "KASP-TS-1Y1D",
+    manufacturer: "Kaspersky Lab",
+    dataAiHint: "antivirus software kaspersky"
+  },
+  {
+    ...softwareTemplate,
+    id: "sw-qheal-ts-1y1d",
+    name: "Quick Heal Total Security (1 Year, 1 Device)",
+    price: 2500.00,
+    shortDescription: "Advanced protection against viruses, ransomware, and evolving cyber threats.",
+    description: "Quick Heal Total Security offers robust security for your digital life. It features advanced DNAScan technology, ransomware protection, safe banking, and web security to keep you safe from all kinds of threats.",
+    images: ["https://placehold.co/400x300.png"],
+    specifications: [
+      { name: "Protection Type", value: "Antivirus, Anti-Malware, Ransomware Protection, Firewall" },
+      { name: "Key Features", value: "DNAScan, Anti-Keylogger, Parental Control, PCTuner" },
+      { name: "Subscription Term", value: "1 Year" },
+      { name: "Device Limit", value: "1 Device" }
+    ],
+    sku: "QHEAL-TS-1Y1D",
+    manufacturer: "Quick Heal Technologies",
+    dataAiHint: "antivirus software quickheal"
+  },
+  {
+    ...softwareTemplate,
+    id: "sw-mbytes-prem-1y1d",
+    name: "Malwarebytes Premium (1 Year, 1 Device)",
+    price: 2000.00,
+    shortDescription: "Smart protection against malware, ransomware, and malicious websites.",
+    description: "Malwarebytes Premium goes beyond traditional antivirus to find and remove malware, ransomware, and other advanced threats. Its real-time protection stops infections before they happen, and cleans up existing ones.",
+    images: ["https://placehold.co/400x300.png"],
+    specifications: [
+      { name: "Protection Type", value: "Anti-Malware, Anti-Ransomware, Web Protection" },
+      { name: "Key Features", value: "Real-time threat detection, Scheduled scans, Exploit protection" },
+      { name: "Subscription Term", value: "1 Year" },
+      { name: "Device Limit", value: "1 Device" }
+    ],
+    sku: "MBYTES-PREM-1Y1D",
+    manufacturer: "Malwarebytes",
+    dataAiHint: "malwarebytes software security"
   }
 ];
 
