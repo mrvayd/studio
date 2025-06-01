@@ -3,12 +3,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Home, List, SlidersHorizontal, BrainCircuit, Laptop, Search } from 'lucide-react';
+import { Menu, X, Home, List, Laptop, Search } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Logo } from '@/components/icons/logo';
-import { ThemeToggleButton } from '@/components/theme-toggle-button';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -49,7 +48,6 @@ export default function Header() {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4">
           <div className="flex items-center gap-4">
-             <div className="h-10 w-10" /> {/* Placeholder for ThemeToggleButton */}
             <Logo />
           </div>
           <div className="h-8 w-8 animate-pulse rounded-md bg-muted md:hidden" /> {/* Skeleton for menu button */}
@@ -62,7 +60,6 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4">
         <div className="flex items-center gap-4">
-          <ThemeToggleButton />
           <Logo />
         </div>
         <nav className="hidden items-center space-x-2 md:flex">
@@ -79,10 +76,9 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
-              <div className="mb-6 flex items-center justify-start gap-4">
-                <ThemeToggleButton />
+              <div className="mb-6 flex items-center justify-between">
                 <Logo />
-                <SheetClose asChild className="ml-auto">
+                <SheetClose asChild>
                   <Button variant="ghost" size="icon">
                     <X className="h-6 w-6" />
                     <span className="sr-only">Close menu</span>
