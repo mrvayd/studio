@@ -9,57 +9,58 @@
 // 2. Uncomment this block.
 // 3. Adjust the font-family name if needed to exactly match what you use in tailwind.config.ts.
 // 4. Adjust font-weight and font-style if your font file has specific variants.
-
+*/
 @font-face {
   font-family: 'Nothing Font 5x7';
-  src: url('/fonts/Nothing-Font-5x7.woff2') format('woff2'); // Adjust filename if needed
+  src: url('/fonts/Nothing-Font-5x7.woff2') format('woff2'); /* Adjust filename if needed */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-*/
+
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Light theme background (white) */
-    --foreground: 220 10% 15%; /* Light theme foreground (dark gray) */
+    /* Light Theme Variables (Nothing-inspired light mode) */
+    --background: 0 0% 100%; /* White */
+    --foreground: 220 0% 10%; /* Almost black text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 10% 15%;
+    --card: 0 0% 97%; /* Very light grey card */
+    --card-foreground: 220 0% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 10% 15%;
+    --popover: 0 0% 97%;
+    --popover-foreground: 220 0% 10%;
 
-    --primary: 198 98% 53%; /* Vibrant Blue */
-    --primary-foreground: 0 0% 98%; /* White for text on primary */
+    --primary: 0 85% 60%; /* Vibrant Red */
+    --primary-foreground: 0 0% 100%; /* White for text on primary */
 
-    --secondary: 220 10% 92%; /* Light gray for secondary elements */
-    --secondary-foreground: 220 10% 25%; /* Darker gray text on light secondary */
+    --secondary: 0 0% 92%; /* Light gray for secondary elements */
+    --secondary-foreground: 220 0% 20%; /* Darker gray text on light secondary */
 
-    --muted: 220 10% 92%;
-    --muted-foreground: 220 10% 45%; /* Medium gray for muted text */
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 45%; /* Medium gray for muted text */
 
-    --accent: 173 100% 44%; /* Teal/Cyan */
-    --accent-foreground: 173 100% 10%; /* Dark Teal for text on accent */
+    --accent: 0 85% 60%; /* Vibrant Red for accent */
+    --accent-foreground: 0 0% 100%; /* White for text on accent */
 
-    --destructive: 0 84.2% 60.2%; /* Standard light theme destructive red */
-    --destructive-foreground: 0 0% 98%; /* White text on destructive red */
+    --destructive: 0 70% 50%; /* Standard destructive red */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 88%; /* Light gray border */
-    --input: 220 10% 88%; /* Light gray input background */
-    --ring: 198 98% 53%; /* Vibrant Blue for focus rings */
+    --border: 0 0% 88%; /* Light gray border */
+    --input: 0 0% 88%; /* Light gray input background */
+    --ring: 0 85% 60%; /* Red for focus rings */
 
-    --radius: 0.75rem;
+    --radius: 0.25rem; /* Sharper corners */
 
     /* Sidebar light theme variables */
-    --sidebar-background: 220 10% 96%;
-    --sidebar-foreground: 220 10% 20%;
-    --sidebar-primary: 198 98% 53%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 173 100% 44%;
-    --sidebar-accent-foreground: 173 100% 10%;
-    --sidebar-border: 220 10% 85%;
-    --sidebar-ring: 198 98% 53%;
+    --sidebar-background: 0 0% 96%;
+    --sidebar-foreground: 220 0% 10%;
+    --sidebar-primary: 0 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 85% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 0 85% 60%;
 
     --chart-1: 198 98% 53%;
     --chart-2: 173 100% 44%;
@@ -69,46 +70,44 @@
   }
 
   .dark {
-    --background: 220 10% 12%; /* Dark Desaturated Blue-Gray */
-    --foreground: 210 40% 98%; /* Light Gray for text */
+    /* Dark Theme Variables (Nothing-inspired dark mode) */
+    --background: 220 0% 6%; /* very dark grey, almost black */
+    --foreground: 0 0% 95%; /* off-white */
 
-    --card: 220 10% 17%; /* Slightly Lighter Dark Blue-Gray */
-    --card-foreground: 210 40% 98%;
+    --card: 220 0% 9%; /* slightly lighter dark grey */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 10% 17%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 0% 9%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 198 98% 53%; /* Vibrant Blue */
-    --primary-foreground: 0 0% 98%; /* White for text on primary */
+    --primary: 0 85% 60%; /* Vibrant Red */
+    --primary-foreground: 0 0% 100%; /* White for text on primary */
 
-    --secondary: 220 10% 22%; /* Medium Dark Blue-Gray */
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 0% 15%; /* Medium Dark Grey */
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 10% 22%;
-    --muted-foreground: 210 20% 70%; /* Muted text */
+    --muted: 220 0% 12%;
+    --muted-foreground: 0 0% 65%; /* Grey for muted text */
 
-    --accent: 173 100% 44%; /* Teal/Cyan */
-    --accent-foreground: 173 100% 10%; /* Dark Teal for text on accent */
+    --accent: 0 85% 60%; /* Vibrant Red for accent */
+    --accent-foreground: 0 0% 100%; /* White for text on accent */
+    
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%; /* Default dark destructive */
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 220 10% 25%; /* Border color */
-    --input: 220 10% 25%;
-    --ring: 198 98% 53%; /* Vibrant Blue for focus rings */
+    --border: 220 0% 18%; /* Subtle dark border */
+    --input: 220 0% 18%; /* Input bg same as border */
+    --ring: 0 85% 60%; /* Red for focus rings */
 
     /* Sidebar dark theme variables */
-    --sidebar-background: 220 10% 10%;
-    --sidebar-foreground: 210 40% 95%;
-    --sidebar-primary: 198 98% 53%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 173 100% 44%;
-    --sidebar-accent-foreground: 173 100% 10%;
-    --sidebar-border: 220 10% 20%;
-    --sidebar-ring: 198 98% 53%;
-
-    /* Chart variables can be the same or overridden for dark mode if needed */
-    /* --chart-1: ...; */
+    --sidebar-background: 220 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 85% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 0% 15%;
+    --sidebar-ring: 0 85% 60%;
   }
 }
 
