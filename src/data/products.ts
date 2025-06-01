@@ -40,7 +40,7 @@ export const mockProducts: Product[] = [
     price: 4500.00,
     shortDescription: "Comprehensive screen service for cracked or malfunctioning laptop displays.",
     description: "Accidents happen. If you've cracked your laptop screen or it's displaying issues like dead pixels or flickering, our expert technicians can help. Our Complete Screen Service covers professional replacement for a wide range of laptop makes and models. We use high-quality replacement parts to ensure your laptop looks and functions like new. Price may vary depending on the laptop model and screen type. Contact us for a quote.",
-    images: ["https://placehold.co/600x400.png"],
+    images: ["https://placehold.co/600x401.png"], // Changed placeholder slightly
     specifications: [
       { name: "Service Type", value: "Complete Screen Replacement" },
       { name: "Common Issues", value: "Cracked screen, Dead pixels, Flickering, Backlight issues" },
@@ -48,7 +48,7 @@ export const mockProducts: Product[] = [
       { name: "Warranty", value: "90-day warranty on parts and labor" }
     ],
     sku: "AE-SVC-SCRNCMPLT-001",
-    dataAiHint: "laptop repair screen"
+    dataAiHint: "laptop screen"
   },
   {
     ...serviceTemplate,
@@ -64,7 +64,7 @@ export const mockProducts: Product[] = [
       { name: "Turnaround Time", value: "Same day to 1 business day (average)" }
     ],
     sku: "AE-SVC-VIRUSREM",
-    dataAiHint: "virus removal security"
+    dataAiHint: "security shield"
   },
   {
     ...serviceTemplate,
@@ -81,7 +81,7 @@ export const mockProducts: Product[] = [
       { name: "Warranty", value: "90-day warranty on performed repairs" }
     ],
     sku: "AE-SVC-MBRREP-1",
-    dataAiHint: "motherboard repair electronics"
+    dataAiHint: "motherboard chip"
   },
   {
     ...serviceTemplate,
@@ -99,7 +99,7 @@ export const mockProducts: Product[] = [
       { name: "Turnaround Time", value: "2-5 business days (evaluation), 5-10 business days (recovery)" }
     ],
     sku: "AE-SVC-DATAREC-001",
-    dataAiHint: "data recovery hard drive"
+    dataAiHint: "hard drive"
   },
   {
     ...serviceTemplate,
@@ -116,7 +116,7 @@ export const mockProducts: Product[] = [
       { name: "Turnaround Time", value: "1-2 business days" }
     ],
     sku: "AE-SVC-TUNEUP-001",
-    dataAiHint: "computer speed optimization"
+    dataAiHint: "speed boost"
   },
   {
     id: "monitor-av-274k",
@@ -138,7 +138,7 @@ export const mockProducts: Product[] = [
     stock: 25,
     sku: "AV-MON-274KIPS",
     manufacturer: "AuraVision Displays",
-    dataAiHint: "4k monitor professional"
+    dataAiHint: "4k monitor"
   },
   {
     id: "monitor-bs-24g",
@@ -160,7 +160,7 @@ export const mockProducts: Product[] = [
     stock: 40,
     sku: "BS-MON-24G144",
     manufacturer: "ByteSync Gaming",
-    dataAiHint: "gaming monitor fast"
+    dataAiHint: "gaming monitor"
   },
   {
     id: "monitor-cv-32qhd",
@@ -182,7 +182,7 @@ export const mockProducts: Product[] = [
     stock: 15,
     sku: "CV-MON-32CQHD",
     manufacturer: "ConnectView Solutions",
-    dataAiHint: "curved monitor productivity"
+    dataAiHint: "curved monitor"
   },
   {
     ...softwareTemplate,
@@ -200,7 +200,7 @@ export const mockProducts: Product[] = [
     ],
     sku: "KASP-TS-1Y1D",
     manufacturer: "Kaspersky Lab",
-    dataAiHint: "antivirus software kaspersky"
+    dataAiHint: "software box"
   },
   {
     ...softwareTemplate,
@@ -218,7 +218,7 @@ export const mockProducts: Product[] = [
     ],
     sku: "QHEAL-TS-1Y1D",
     manufacturer: "Quick Heal Technologies",
-    dataAiHint: "antivirus software quickheal"
+    dataAiHint: "software box"
   },
   {
     ...softwareTemplate,
@@ -236,12 +236,14 @@ export const mockProducts: Product[] = [
     ],
     sku: "MBYTES-PREM-1Y1D",
     manufacturer: "Malwarebytes",
-    dataAiHint: "malwarebytes software security"
+    dataAiHint: "software box"
   }
 ];
 
 export function getProductById(id: string): Product | undefined {
   return mockProducts.find(p => p.id === id);
 }
+
+    
 
     
