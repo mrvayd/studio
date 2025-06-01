@@ -40,7 +40,7 @@ export const mockProducts: Product[] = [
     price: 4500.00,
     shortDescription: "Comprehensive screen service for cracked or malfunctioning laptop displays.",
     description: "Accidents happen. If you've cracked your laptop screen or it's displaying issues like dead pixels or flickering, our expert technicians can help. Our Complete Screen Service covers professional replacement for a wide range of laptop makes and models. We use high-quality replacement parts to ensure your laptop looks and functions like new. Price may vary depending on the laptop model and screen type. Contact us for a quote.",
-    images: ["https://placehold.co/600x401.png"], // Changed placeholder slightly
+    images: ["https://placehold.co/600x401.png"],
     specifications: [
       { name: "Service Type", value: "Complete Screen Replacement" },
       { name: "Common Issues", value: "Cracked screen, Dead pixels, Flickering, Backlight issues" },
@@ -57,7 +57,7 @@ export const mockProducts: Product[] = [
     price: 2500.00,
     shortDescription: "Comprehensive virus, spyware, and malware cleanup for your PC or laptop.",
     description: "Is your computer running slow, showing pop-ups, or behaving erratically? It might be infected with viruses or malware. Our expert technicians perform deep scans and thorough removal of all types of malicious software, including viruses, spyware, adware, and rootkits. We'll also provide advice on how to stay protected in the future. Get your system clean and running smoothly again.",
-    images: ["https://placehold.co/600x400.png"],
+    images: ["https://placehold.co/601x400.png"], // Changed
     specifications: [
       { name: "Service Type", value: "Virus & Malware Removal" },
       { name: "Includes", value: "Deep Scan, Threat Removal, System Optimization Tips, Security Advice" },
@@ -191,7 +191,7 @@ export const mockProducts: Product[] = [
     price: 3000.00,
     shortDescription: "Comprehensive protection against viruses, malware, and online threats.",
     description: "Kaspersky Total Security provides premium protection for your devices. It safeguards your privacy, money, identity, photos, and family against online dangers. Includes antivirus, anti-ransomware, webcam security, VPN, and more.",
-    images: ["https://placehold.co/400x300.png"],
+    images: ["https://placehold.co/401x300.png"], // Changed
     specifications: [
       { name: "Protection Type", value: "Antivirus, Anti-Malware, Firewall, VPN" },
       { name: "Key Features", value: "Real-time protection, Secure Browsing, Parental Controls, Password Manager" },
@@ -243,7 +243,5 @@ export const mockProducts: Product[] = [
 export function getProductById(id: string): Product | undefined {
   return mockProducts.find(p => p.id === id);
 }
-
-    
 
     
