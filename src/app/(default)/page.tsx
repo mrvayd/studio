@@ -1,4 +1,7 @@
 
+"use client";
+
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { ArrowRight, Lightbulb, SearchCheck, Users, Wrench, Laptop, HardDrive } from "lucide-react";
@@ -31,6 +34,13 @@ const ExpertAdviceCard = () => (
 );
 
 export default function HomePage() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsMounted(true), 100); // Slight delay for animation trigger
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="space-y-16">
       {/* Hero Section with Flutter.dev inspired background gradient and image opacity */}
@@ -45,18 +55,25 @@ export default function HomePage() {
             />
         </div>
         <div className="relative z-10 container mx-auto px-4">
-          {/* Headline size adjusted during initial flutter theme update */}
           <h1
-            className="whitespace-nowrap font-nothing text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
+            className={`whitespace-nowrap font-nothing text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent
+                       ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}
+                       transition-all ease-out duration-700 delay-200`}
           >
             Allied Electronics
           </h1>
-          {/* Subtitle margin and size adjusted during initial flutter theme update */}
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-foreground/70 sm:text-xl md:text-2xl font-headline">
+          <p
+            className={`mt-6 max-w-2xl mx-auto text-lg text-foreground/70 sm:text-xl md:text-2xl font-headline
+                       ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}
+                       transition-all ease-out duration-700 delay-400`}
+          >
             complete solution of your problem
           </p>
-          {/* Button container margin adjusted, button shadows removed during initial flutter theme update */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div
+            className={`mt-10 flex flex-col sm:flex-row items-center justify-center gap-4
+                       ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}
+                       transition-all ease-out duration-700 delay-600`}
+          >
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 ease-in-out transform hover:scale-105">
               <Link href="/browse">
                 Browse Products <ArrowRight className="ml-2 h-5 w-5" />
@@ -161,4 +178,3 @@ function FeatureCard({ icon, title, description, link, linkText }: FeatureCardPr
     </Card>
   );
 }
-
