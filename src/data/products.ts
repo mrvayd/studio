@@ -19,20 +19,10 @@ export interface Product {
   dataAiHint?: string;
 }
 
-const laptopServiceTemplate: Omit<Product, 'id' | 'sku'> = {
-  name: "Laptop Screen Replacement Service",
+const laptopScreenServiceTemplate: Omit<Product, 'id' | 'sku' | 'name' | 'shortDescription' | 'description' | 'images' | 'specifications' | 'dataAiHint' > & { category: string; price: number; stock: number } = {
   category: "Repair Services",
   price: 4500.00, // Starting price
-  shortDescription: "Professional screen replacement for cracked or malfunctioning laptop displays.",
-  description: "Accidents happen. If you've cracked your laptop screen or it's displaying issues like dead pixels or flickering, our expert technicians can help. We offer professional screen replacement services for a wide range of laptop makes and models. We use high-quality replacement parts to ensure your laptop looks and functions like new. Price may vary depending on the laptop model and screen type. Contact us for a quote.",
-  images: ["https://placehold.co/600x400.png"],
-  specifications: [
-    { name: "Service Type", value: "Screen Replacement" },
-    { name: "Turnaround Time", value: "1-3 business days (average)" },
-    { name: "Warranty", value: "90-day warranty on parts and labor" }
-  ],
   stock: 100, // Represents service availability
-  dataAiHint: "laptop repair"
 };
 
 const virusRemovalService: Product = {
@@ -53,23 +43,73 @@ const virusRemovalService: Product = {
   dataAiHint: "virus removal security"
 };
 
+const motherboardRepairService: Product = {
+  id: "service-mb1",
+  name: "Laptop Motherboard Repair Service",
+  category: "Repair Services",
+  price: 8000.00, // Starting price, motherboard repairs are typically more expensive
+  shortDescription: "Expert diagnosis and repair for laptop motherboard issues.",
+  description: "Facing issues like no power, unexpected shutdowns, or component failures? Your laptop's motherboard might be the culprit. Our skilled technicians offer comprehensive motherboard repair services, including component-level repairs, BGA reballing/reflowing, and trace repairs. Due to the complexity, a diagnostic fee may apply, which will be credited towards the final repair cost. Contact us for an assessment.",
+  images: ["https://placehold.co/600x400.png"],
+  specifications: [
+    { name: "Service Type", value: "Motherboard Repair & Diagnosis" },
+    { name: "Common Issues", value: "No Power, Liquid Damage, Component Failure, Overheating" },
+    { name: "Turnaround Time", value: "3-7 business days (average, depends on complexity)" },
+    { name: "Warranty", value: "90-day warranty on performed repairs" }
+  ],
+  stock: 50, // Represents service capacity
+  sku: "AE-SVC-MBRREP-1",
+  dataAiHint: "motherboard repair electronics"
+};
+
 export const mockProducts: Product[] = [
   {
-    ...laptopServiceTemplate,
-    id: "service-1",
-    sku: "AE-SVC-SCRNREP-1",
+    ...laptopScreenServiceTemplate,
+    id: "service-scrn1",
+    name: "Laptop Screen Replacement Service",
+    shortDescription: "Professional screen replacement for cracked or malfunctioning laptop displays.",
+    description: "Accidents happen. If you've cracked your laptop screen or it's displaying issues like dead pixels or flickering, our expert technicians can help. We offer professional screen replacement services for a wide range of laptop makes and models. We use high-quality replacement parts to ensure your laptop looks and functions like new. Price may vary depending on the laptop model and screen type. Contact us for a quote.",
+    images: ["https://placehold.co/600x400.png"],
+    specifications: [
+      { name: "Service Type", value: "Screen Replacement" },
+      { name: "Turnaround Time", value: "1-3 business days (average)" },
+      { name: "Warranty", value: "90-day warranty on parts and labor" }
+    ],
+    sku: "AE-SVC-SCRNREP-001",
+    dataAiHint: "laptop repair"
   },
   {
-    ...laptopServiceTemplate,
-    id: "service-2",
-    sku: "AE-SVC-SCRNREP-2", 
+    ...laptopScreenServiceTemplate,
+    id: "service-scrn2",
+    name: "Laptop Screen Replacement Service",
+    shortDescription: "Professional screen replacement for cracked or malfunctioning laptop displays.",
+    description: "Accidents happen. If you've cracked your laptop screen or it's displaying issues like dead pixels or flickering, our expert technicians can help. We offer professional screen replacement services for a wide range of laptop makes and models. We use high-quality replacement parts to ensure your laptop looks and functions like new. Price may vary depending on the laptop model and screen type. Contact us for a quote.",
+    images: ["https://placehold.co/600x400.png"],
+    specifications: [
+      { name: "Service Type", value: "Screen Replacement" },
+      { name: "Turnaround Time", value: "1-3 business days (average)" },
+      { name: "Warranty", value: "90-day warranty on parts and labor" }
+    ],
+    sku: "AE-SVC-SCRNREP-002",
+    dataAiHint: "laptop repair"
   },
   {
-    ...laptopServiceTemplate,
-    id: "service-3",
-    sku: "AE-SVC-SCRNREP-3",
+    ...laptopScreenServiceTemplate,
+    id: "service-scrn3",
+    name: "Laptop Screen Replacement Service",
+    shortDescription: "Professional screen replacement for cracked or malfunctioning laptop displays.",
+    description: "Accidents happen. If you've cracked your laptop screen or it's displaying issues like dead pixels or flickering, our expert technicians can help. We offer professional screen replacement services for a wide range of laptop makes and models. We use high-quality replacement parts to ensure your laptop looks and functions like new. Price may vary depending on the laptop model and screen type. Contact us for a quote.",
+    images: ["https://placehold.co/600x400.png"],
+    specifications: [
+      { name: "Service Type", value: "Screen Replacement" },
+      { name: "Turnaround Time", value: "1-3 business days (average)" },
+      { name: "Warranty", value: "90-day warranty on parts and labor" }
+    ],
+    sku: "AE-SVC-SCRNREP-003",
+    dataAiHint: "laptop repair"
   },
   virusRemovalService,
+  motherboardRepairService,
 ];
 
 export function getProductById(id: string): Product | undefined {
