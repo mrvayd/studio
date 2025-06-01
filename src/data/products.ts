@@ -19,7 +19,7 @@ export interface Product {
   dataAiHint?: string;
 }
 
-const laptopServiceTemplate: Omit<Product, 'id'> = {
+const laptopServiceTemplate: Omit<Product, 'id' | 'sku'> = {
   name: "Laptop Screen Replacement Service",
   category: "Repair Services",
   price: 4500.00, // Starting price
@@ -32,27 +32,44 @@ const laptopServiceTemplate: Omit<Product, 'id'> = {
     { name: "Warranty", value: "90-day warranty on parts and labor" }
   ],
   stock: 100, // Represents service availability
-  sku: "AE-SVC-SCRNREP",
   dataAiHint: "laptop repair"
+};
+
+const virusRemovalService: Product = {
+  id: "service-vr1",
+  name: "Virus & Malware Removal Service",
+  category: "Repair Services",
+  price: 2500.00,
+  shortDescription: "Comprehensive virus, spyware, and malware cleanup for your PC or laptop.",
+  description: "Is your computer running slow, showing pop-ups, or behaving erratically? It might be infected with viruses or malware. Our expert technicians perform deep scans and thorough removal of all types of malicious software, including viruses, spyware, adware, and rootkits. We'll also provide advice on how to stay protected in the future. Get your system clean and running smoothly again.",
+  images: ["https://placehold.co/600x400.png"],
+  specifications: [
+    { name: "Service Type", value: "Virus & Malware Removal" },
+    { name: "Includes", value: "Deep Scan, Threat Removal, System Optimization Tips" },
+    { name: "Turnaround Time", value: "Same day to 1 business day (average)" }
+  ],
+  stock: 100, // Represents service availability
+  sku: "AE-SVC-VIRUSREM",
+  dataAiHint: "virus removal security"
 };
 
 export const mockProducts: Product[] = [
   {
     ...laptopServiceTemplate,
     id: "service-1",
+    sku: "AE-SVC-SCRNREP-1",
   },
   {
     ...laptopServiceTemplate,
     id: "service-2",
-    // You could vary other minor details here if needed, like SKU, for true uniqueness
-    // but for now, keeping them identical as per "every single" request.
     sku: "AE-SVC-SCRNREP-2", 
   },
   {
     ...laptopServiceTemplate,
     id: "service-3",
     sku: "AE-SVC-SCRNREP-3",
-  }
+  },
+  virusRemovalService,
 ];
 
 export function getProductById(id: string): Product | undefined {
